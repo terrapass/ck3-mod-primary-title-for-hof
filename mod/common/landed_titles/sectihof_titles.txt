@@ -2,7 +2,7 @@
 # Maybe I can use a title template somehow
 # and create the actual title at runtime?
 # (Though in that case flavorization would probably go out the window.)
-d_secular_title_for_hof_prefer_religious = {
+d_sectihof_prefer_religious = {
 	color = { 255 0 255 }
 
 	definite_form = yes
