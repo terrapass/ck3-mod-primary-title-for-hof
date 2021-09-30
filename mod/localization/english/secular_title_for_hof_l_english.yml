@@ -1,0 +1,27 @@
+﻿# TODO: Switch to using concrete game concepts/faith/title names instead of generalized descriptions
+l_english:
+ #
+ # 
+ #
+ #ye_olde_title:0 "[GetPlayer.MakeScope.Var('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
+ ye_olde_title:0 "[GetGlobalVariable('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
+
+ # Decisions
+ # TODO
+
+ #
+ # Events
+ #
+
+ # secular_title_for_hof_events.1001 - Switch to HoF religious title
+ secular_title_for_hof_events.1001.t:0 "Adopting My Religious Appelation"
+ secular_title_for_hof_events.1001.desc:0 "What's a mere realm, when I'm in charge of countless faithful souls?\n\nMy title should reflect the great responsibility laid upon my shoulders."
+ secular_title_for_hof_events.1001.a:0 "Yes, I shall be addressed as the Head of Faith should be"
+ secular_title_for_hof_events.1001.b:0 "Actually, my current title will do"
+
+ # secular_title_for_hof_events.1002 - Switch to primary secular title
+ # e.g "Empire Above All"/"Ireland Above All"
+ secular_title_for_hof_events.1002.t:0 "My Realm Above All"
+ secular_title_for_hof_events.1002.desc:0 "Nothing is more important than the realm I rule. All religious concerns are secondary.\n\nI wish to be addressed by my secular title again!"
+ secular_title_for_hof_events.1002.a:0 "Indeed. Secular title it is!"
+ secular_title_for_hof_events.1002.b:0 "On second thought, head of faith does have a certain ring to it"

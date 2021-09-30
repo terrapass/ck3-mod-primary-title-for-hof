@@ -1,0 +1,119 @@
+﻿namespace = secular_title_for_hof_events
+
+# Switch to HoF religious title
+secular_title_for_hof_events.1001 = {
+    type = character_event
+
+    title = secular_title_for_hof_events.1001.t
+
+    desc = secular_title_for_hof_events.1001.desc
+
+    theme = faith
+
+    left_portrait = {
+        character = this
+        animation = bold
+    }
+
+    # immediate = {
+    #     # Nothing?
+    # }
+
+    # Confirm switching to religious title
+    option = {
+        name = secular_title_for_hof_events.1001.a
+
+        add_internal_flag = special
+
+        debug_log = "secular_title_for_hof_events.1001.a (confirmed switch to HoF religious title)"
+
+        faith = {
+            religious_head_title = {
+                save_scope_as = old_hof_title
+            }
+        }
+
+        set_global_variable = {
+            name = ye_olde_title
+            value = scope:old_hof_title
+        }
+
+        assert_if = {
+            limit = { NOT = { scope:old_hof_title = { holder = root } } }
+
+            text = "must be the current holder of HoF title"
+        }
+
+        assert_if = {
+            limit = { has_title = title:d_secular_title_for_hof_prefer_religious }
+
+            text = "must NOT already be the current holder of d_secular_title_for_hof_prefer_religious"
+        }
+
+        create_title_and_vassal_change = {
+            type = created
+            save_scope_as = change
+            add_claim_on_loss = no
+        }
+
+        title:d_secular_title_for_hof_prefer_religious = {
+            set_destroy_if_invalid_heir = yes
+            set_no_automatic_claims = yes
+            set_definitive_form = yes
+            set_always_follows_primary_heir = yes
+
+            change_title_holder = {
+                holder = root
+                change = scope:change
+            }
+
+            #set_title_name = scope:old_hof_title # FIXME: "Duchy of Scope:old_hof_title"
+            #set_title_name = "[ROOT.GetLandedTitle.GetBaseNameNoTierNoTooltip]"
+            set_title_name = ye_olde_title
+            set_coa = scope:old_hof_title
+            copy_title_history = scope:old_hof_title
+        }
+
+        resolve_title_and_vassal_change = scope:change
+
+        faith = {
+            set_religious_head_title = title:d_secular_title_for_hof_prefer_religious
+        }
+
+        add_realm_law_skip_effects = same_faith_succession_law
+
+        title:d_secular_title_for_hof_prefer_religious = {
+            add_title_law = temporal_head_of_faith_succession_law
+        }
+
+        destroy_title = scope:old_hof_title
+    }
+
+    # Cancel and continue using secular title
+    option = {
+        name = secular_title_for_hof_events.1001.b
+
+        debug_log = "secular_title_for_hof_events.1001.b (cancelled switch to HoF religious title)"
+    }
+
+    # TODO
+}
+
+# Switch to primary secular title
+secular_title_for_hof_events.1002 = {
+    type = character_event
+
+    title = secular_title_for_hof_events.1002.t
+
+    desc = secular_title_for_hof_events.1002.desc
+
+    theme = faith
+
+    # TODO
+
+    option = {
+        name = secular_title_for_hof_events.1002.b
+
+        debug_log = "secular_title_for_hof_events.1001 (switched to primary secular title)"
+    }
+}
