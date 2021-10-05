@@ -1,10 +1,25 @@
 ﻿# TODO: Switch to using concrete game concepts/faith/title names instead of generalized descriptions
 l_english:
  #
- # 
+ # Flavors
+ #
+ sectihof_head_of_faith_male:0 "$head_of_faith_male$"
+ sectihof_head_of_faith_female:0 "$head_of_faith_female$"
+
+ #
+ # Titles
  #
  #ye_olde_title:0 "[GetPlayer.MakeScope.Var('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
- ye_olde_title:0 "[GetGlobalVariable('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
+ #ye_olde_title:0 "[GetGlobalVariable('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
+ #sectihof_old_hof_title:0 "[GetScriptedGui('sectihof_old_hof_title_name').ExecuteTooltip(GuiScope.SetRoot(ROOT.Char.MakeScope).End)]"
+ #sectihof_old_hof_title:0 "[GetScriptedGui('sectihof_old_hof_title_name').ExecuteTooltip(GuiScope.SetRoot(ROOT.Title.MakeScope).End)]"
+ #sectihof_old_hof_title:0 "T[GetScriptedGui('sectihof_old_hof_title_name').ExecuteTooltip(GuiScope.SetRoot(GetPlayer.MakeScope).End)]" # This works for what it is, but what to replace GetPlayer with?
+ #sectihof_old_hof_title:0 "T[GetScriptedGui('sectihof_old_hof_title_name').ExecuteTooltip(GuiScope.SetRoot(ROOT.Title.MakeScope).End)]"
+ sectihof_old_hof_title:0 "[THIS.Title.MakeScope.Var('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
+ #sectihof_old_hof_title:0 "[GetGlobalVariable('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
+ #sectihof_old_hof_title:0 "[GetGlobalVariable('ye_olde_title').Title.GetBaseNameNoTierNoTooltip]"
+ #sectihof_old_hof_title_impl:0 "[THIS.Title.GetBaseNameNoTierNoTooltip]"
+ sectihof_old_hof_title_impl:0 "Good if non-empty ([TITLE.GetBaseNameNoTierNoTooltip])"
 
  # Decisions
  # TODO

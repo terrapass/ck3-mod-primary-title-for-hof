@@ -67,9 +67,12 @@ sectihof_events.1001 = {
                 change = scope:change
             }
 
+            # TODO: set_variable old_hof_title
+
             #set_title_name = scope:old_hof_title # FIXME: "Duchy of Scope:old_hof_title"
             #set_title_name = "[ROOT.GetLandedTitle.GetBaseNameNoTierNoTooltip]"
-            set_title_name = ye_olde_title
+            set_title_name = sectihof_old_hof_title
+
             set_coa = scope:old_hof_title
             copy_title_history = scope:old_hof_title
         }
