@@ -1,5 +1,1 @@
-﻿sectihof_effect_old_hof_title = {
-    first = sectihof_old_hof_title_impl
-    third = sectihof_old_hof_title_impl
-    global = sectihof_old_hof_title_impl
-}
+﻿# TODO

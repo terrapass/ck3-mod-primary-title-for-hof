@@ -33,11 +33,6 @@ sectihof_events.1001 = {
             }
         }
 
-        set_global_variable = {
-            name = ye_olde_title
-            value = scope:old_hof_title
-        }
-
         assert_if = {
             limit = { NOT = { scope:old_hof_title = { holder = root } } }
 
@@ -48,6 +43,11 @@ sectihof_events.1001 = {
             limit = { has_title = title:d_sectihof_prefer_religious }
 
             text = "must NOT already be the current holder of d_sectihof_prefer_religious"
+        }
+
+        set_global_variable = {
+            name = sectihof_old_hof_title
+            value = scope:old_hof_title
         }
 
         create_title_and_vassal_change = {
@@ -67,10 +67,6 @@ sectihof_events.1001 = {
                 change = scope:change
             }
 
-            # TODO: set_variable old_hof_title
-
-            #set_title_name = scope:old_hof_title # FIXME: "Duchy of Scope:old_hof_title"
-            #set_title_name = "[ROOT.GetLandedTitle.GetBaseNameNoTierNoTooltip]"
             set_title_name = sectihof_old_hof_title
 
             set_coa = scope:old_hof_title
@@ -83,6 +79,7 @@ sectihof_events.1001 = {
             set_religious_head_title = title:d_sectihof_prefer_religious
         }
 
+        # TODO: Wrap in an if to suppress error logs
         add_realm_law_skip_effects = same_faith_succession_law
 
         title:d_sectihof_prefer_religious = {
