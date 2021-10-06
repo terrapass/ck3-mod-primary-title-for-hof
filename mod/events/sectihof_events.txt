@@ -109,11 +109,79 @@ sectihof_events.1002 = {
 
     theme = faith
 
-    # TODO
+    left_portrait = {
+        character = this
+        animation = personality_bold
+    }
+
+    option = {
+        name = sectihof_events.1002.a
+
+        add_internal_flag = special
+
+        debug_log = "sectihof_events.1002.a (switched to primary secular title)"
+
+        assert_if = {
+            limit = { NOT = { exists = global_var:sectihof_old_hof_title } }
+
+            text = "global_var:sectihof_old_hof_title must be set at this point"
+        }
+
+        assert_if = {
+            limit = { NOT = { has_title = title:d_sectihof_prefer_religious } }
+
+            text = "must be the holder of d_sectihof_prefer_religious"
+        }
+
+        create_title_and_vassal_change = {
+            type = created
+            save_scope_as = change
+            add_claim_on_loss = no
+        }
+
+        global_var:sectihof_old_hof_title = {
+            set_destroy_if_invalid_heir = yes
+            set_no_automatic_claims = yes
+            set_definitive_form = yes
+            set_always_follows_primary_heir = yes
+
+            change_title_holder = {
+                holder = root
+                change = scope:change
+            }
+
+            #set_title_name = i_dont_know_what_to_put_here_actually # TODO
+
+            set_coa = title:d_sectihof_prefer_religious
+
+            # TODO: Maybe try using a dummy d_sectihof_dummy_history_storage title
+            #       to record the history prior to holder change and then
+            #       copy it over after change, in order to discard the extraneous
+            #       title change recorded by change?
+            copy_title_history = title:d_sectihof_prefer_religious
+        }
+
+        resolve_title_and_vassal_change = scope:change
+
+        faith = {
+            set_religious_head_title = global_var:sectihof_old_hof_title
+        }
+
+        # TODO: Wrap in an if to suppress error logs
+        add_realm_law_skip_effects = same_faith_succession_law
+
+        global_var:sectihof_old_hof_title = {
+            add_title_law = temporal_head_of_faith_succession_law
+        }
+
+        destroy_title = title:d_sectihof_prefer_religious
+
+        remove_global_variable = sectihof_old_hof_title
+    }
 
     option = {
         name = sectihof_events.1002.b
 
-        debug_log = "sectihof_events.1001 (switched to primary secular title)"
+        debug_log = "sectihof_events.1002.b (cancelled switch to primary secular title)"
     }
 }
