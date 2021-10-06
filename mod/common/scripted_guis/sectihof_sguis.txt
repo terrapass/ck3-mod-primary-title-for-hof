@@ -1,1 +1,37 @@
-﻿# TODO
+﻿sectihof_sgui_is_override_primary_title_checked = {
+	scope = faith
+
+	is_valid = {
+		religious_head_title = title:d_sectihof_prefer_religious
+	}
+}
+
+sectihof_sgui_toggle_override_primary_title = {
+	scope = faith
+
+	saved_scopes = {
+		player
+	}
+
+	is_shown = {
+		religious_head_title = {
+			holder = scope:player
+		}
+	}
+
+	is_valid = {
+		scope:player = {
+			primary_title = {
+				OR = {
+					tier = tier_empire
+					tier = tier_kingdom
+					tier = tier_duchy
+				}
+			}
+		}
+	}
+
+	effect = {
+		debug_log = "BANANAS"
+	}
+}

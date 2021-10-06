@@ -1,6 +1,11 @@
 ﻿# TODO: Switch to using concrete game concepts/faith/title names instead of generalized descriptions
 l_english:
  #
+ # GUI
+ #
+ SECTIHOF_LABEL_OVERRIDE_PRIMARY_TITLE:0 "Override Primary Title"
+
+ #
  # Flavors
  #
  sectihof_head_of_faith_male:0 "$head_of_faith_male$"
