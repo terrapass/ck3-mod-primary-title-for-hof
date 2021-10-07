@@ -4,28 +4,10 @@
 sectihof_events.1001 = {
     type = character_event
 
-    title = sectihof_events.1001.t
+    hidden = yes
 
-    desc = sectihof_events.1001.desc
-
-    theme = faith
-
-    left_portrait = {
-        character = this
-        animation = personality_bold
-    }
-
-    # immediate = {
-    #     # Nothing?
-    # }
-
-    # Confirm switching to religious title
-    option = {
-        name = sectihof_events.1001.a
-
-        add_internal_flag = special
-
-        debug_log = "sectihof_events.1001.a (confirmed switch to HoF religious title)"
+    immediate = {
+        debug_log = "sectihof_events.1001 (switching to HoF religious title)"
 
         faith = {
             religious_head_title = {
@@ -88,39 +70,18 @@ sectihof_events.1001 = {
 
         destroy_title = scope:old_hof_title
     }
-
-    # Cancel and continue using secular title
-    option = {
-        name = sectihof_events.1001.b
-
-        debug_log = "sectihof_events.1001.b (cancelled switch to HoF religious title)"
-    }
-
-    # TODO
 }
 
 # Switch to primary secular title
 sectihof_events.1002 = {
     type = character_event
 
-    title = sectihof_events.1002.t
+    hidden = yes
 
-    desc = sectihof_events.1002.desc
-
-    theme = faith
-
-    left_portrait = {
-        character = this
-        animation = personality_bold
-    }
-
-    # Confirm switching to religious title
-    option = {
-        name = sectihof_events.1002.a
-
+    immediate = {
         add_internal_flag = special
 
-        debug_log = "sectihof_events.1002.a (switched to primary secular title)"
+        debug_log = "sectihof_events.1002 (switching to primary secular title)"
 
         assert_if = {
             limit = { NOT = { exists = global_var:sectihof_old_hof_title } }
@@ -178,12 +139,5 @@ sectihof_events.1002 = {
         destroy_title = title:d_sectihof_prefer_religious
 
         remove_global_variable = sectihof_old_hof_title
-    }
-
-    # Cancel and continue using religious title
-    option = {
-        name = sectihof_events.1002.b
-
-        debug_log = "sectihof_events.1002.b (cancelled switch to primary secular title)"
     }
 }
