@@ -114,6 +114,7 @@ sectihof_events.1002 = {
         animation = personality_bold
     }
 
+    # Confirm switching to religious title
     option = {
         name = sectihof_events.1002.a
 
@@ -179,6 +180,7 @@ sectihof_events.1002 = {
         remove_global_variable = sectihof_old_hof_title
     }
 
+    # Cancel and continue using religious title
     option = {
         name = sectihof_events.1002.b
 

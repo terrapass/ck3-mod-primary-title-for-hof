@@ -32,6 +32,21 @@ sectihof_sgui_toggle_override_primary_title = {
 	}
 
 	effect = {
-		debug_log = "BANANAS"
+		if = {
+			limit = {
+				scope:player = {
+					NOT = { has_title = title:d_sectihof_prefer_religious }
+				}
+			}
+
+			scope:player = {
+				trigger_event = sectihof_events.1001 # Switch to HoF religious title
+			}
+		}
+		else = {
+			scope:player = {
+				trigger_event = sectihof_events.1002 # Switch to primary secular title
+			}
+		}
 	}
 }
