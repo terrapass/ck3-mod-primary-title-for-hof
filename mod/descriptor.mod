@@ -3,5 +3,6 @@ tags={
 	"Fixes"
 	"Culture"
 }
-name="Secular Title for Head of Faith"
+name="Primary Title for Head of Faith"
+picture="thumbnail.png"
 supported_version="1.4.4"
