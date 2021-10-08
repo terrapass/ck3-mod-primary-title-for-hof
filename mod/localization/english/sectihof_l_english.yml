@@ -28,6 +28,7 @@ l_english:
  # Titles
  #
  sectihof_old_hof_title:0 "[GetGlobalVariable('sectihof_old_hof_title').Title.GetBaseNameNoTierNoTooltip]"
+ sectihof_old_hof_title_adj:0 " "
 
  # Decisions
  # TODO
