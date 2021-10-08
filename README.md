@@ -4,7 +4,7 @@ Primary Title for Head of Faith
 ============================================
 _(a Crusader Kings III mod)_
 
-<img src="https://raw.githubusercontent.com/terrapass/ck3-mod-primary-title-for-hof/master/mod/thumbnail.png?token=AAJVTCLWWADS3ERRKLPCISDBMDMHQ" alt="Mod Thumbnail" width="250" height="250" />
+<img src="https://raw.githubusercontent.com/terrapass/ck3-mod-primary-title-for-hof/master/mod/thumbnail.png?token=AAJVTCMAUNGJKRSG4XYTNQLBMDM6K" alt="Mod Thumbnail" width="250" height="250" />
 
 This mod allows you to continue using your primary title even after becoming the Head of Faith.
 
