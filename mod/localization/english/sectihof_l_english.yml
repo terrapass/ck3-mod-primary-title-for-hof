@@ -8,10 +8,15 @@ l_english:
  #
  # Triggers
  #
- sectihof_trigger_existing_savegame:0 "Switching between [primary_title|E] and [head_of_faith|E] title during the game is only supported in new savegames"
+ sectihof_trigger_existing_savegame:0 "Switching between [primary_title|E] and [head_of_faith|E] title during the game is only supported in new savegames.\n#weak Your characters will always use their [primary_titles|E] in existing savegames.#!"
  NOT_sectihof_trigger_existing_savegame:0 "$sectihof_trigger_existing_savegame$"
  sectihof_trigger_caliph:0 "Sunni and Shia [heads_of_faith|E] always use the #high $caliph$#! title"
  NOT_sectihof_trigger_caliph:0 "$sectihof_trigger_caliph$"
+
+ #
+ # Effects
+ #
+ sectihof_effect_switch_to_religious_title_checkbox:0 "Use your [head_of_faith|E] title instead of your [primary_title|E]"
 
  #
  # Flavors

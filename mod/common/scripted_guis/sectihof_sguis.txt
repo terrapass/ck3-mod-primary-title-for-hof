@@ -61,6 +61,10 @@ sectihof_sgui_toggle_override_primary_title = {
 	}
 
 	effect = {
+		custom_description_no_bullet = {
+			text = "sectihof_effect_switch_to_religious_title_checkbox"
+		}
+
 		if = {
 			limit = {
 				scope:player = {
