@@ -32,6 +32,10 @@ sectihof_events.1001 = {
             value = scope:old_hof_title
         }
 
+        title:d_sectihof_temporary_title_history_storage = {
+            copy_title_history = scope:old_hof_title
+        }
+
         create_title_and_vassal_change = {
             type = created
             save_scope_as = change
@@ -56,6 +60,10 @@ sectihof_events.1001 = {
         }
 
         resolve_title_and_vassal_change = scope:change
+
+        title:d_sectihof_prefer_religious = {
+            copy_title_history = title:d_sectihof_temporary_title_history_storage
+        }
 
         faith = {
             set_religious_head_title = title:d_sectihof_prefer_religious
@@ -95,6 +103,10 @@ sectihof_events.1002 = {
             text = "must be the holder of d_sectihof_prefer_religious"
         }
 
+        title:d_sectihof_temporary_title_history_storage = {
+            copy_title_history = title:d_sectihof_prefer_religious
+        }
+
         create_title_and_vassal_change = {
             type = created
             save_scope_as = change
@@ -116,14 +128,14 @@ sectihof_events.1002 = {
 
             set_coa = title:d_sectihof_prefer_religious
 
-            # TODO: Maybe try using a dummy d_sectihof_dummy_history_storage title
-            #       to record the history prior to holder change and then
-            #       copy it over after change, in order to discard the extraneous
-            #       title change recorded by change?
             copy_title_history = title:d_sectihof_prefer_religious
         }
 
         resolve_title_and_vassal_change = scope:change
+
+        global_var:sectihof_old_hof_title = {
+            copy_title_history = title:d_sectihof_temporary_title_history_storage
+        }
 
         faith = {
             set_religious_head_title = global_var:sectihof_old_hof_title

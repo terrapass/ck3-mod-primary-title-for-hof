@@ -8,3 +8,7 @@
 	definite_form = yes
 	always_follows_primary_heir = yes
 }
+
+d_sectihof_temporary_title_history_storage = {
+	color = { 0 255 255 }
+}
