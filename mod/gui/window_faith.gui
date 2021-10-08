@@ -708,8 +708,9 @@ window = {
 							button_checkbox_label = {
 								datacontext = "[GetScriptedGui('sectihof_sgui_toggle_override_primary_title')]"
 								visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
+								enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
 								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
-								tooltip = "[ScriptedGui.ExecuteTooltip( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
+								tooltip = "[ScriptedGui.BuildTooltip( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
 
 								blockoverride "checkbox"
 								{

@@ -2,7 +2,19 @@
 	scope = faith
 
 	is_valid = {
-		religious_head_title = title:d_sectihof_prefer_religious
+		AND = {
+			exists = religious_head_title # Suppress error logs while there's no HoF
+			OR = {
+				AND = {
+					exists = title:d_sectihof_prefer_religious # Suppress error logs on existing saves
+					religious_head_title = title:d_sectihof_prefer_religious
+				}
+
+				# Caliphs always use the religious title
+				religious_head_title = title:d_sunni
+				religious_head_title = title:d_shiite
+			}
+		}
 	}
 }
 
@@ -14,18 +26,27 @@ sectihof_sgui_toggle_override_primary_title = {
 	}
 
 	is_shown = {
-		religious_head_title = {
-			holder = scope:player
+		AND = {
+			exists = religious_head_title
+			religious_head_title = {
+				holder = scope:player
+			}
 		}
 	}
 
 	is_valid = {
 		scope:player = {
-			primary_title = {
-				OR = {
-					tier = tier_empire
-					tier = tier_kingdom
-					tier = tier_duchy
+			AND = {
+				# Disable override checkbox for existing saves
+				# (cannot use d_sectihof_prefer_religious, as it's not defined there,
+				# existing saves will always use secular title for custom HoF)
+				exists = title:d_sectihof_prefer_religious
+
+				# Disable override checkbox for Caliphs
+				# (Sunni and Shiite HoF will always use the Caliph title)
+				NOR = {
+					has_title = title:d_sunni
+					has_title = title:d_shiite
 				}
 			}
 		}
