@@ -685,7 +685,12 @@ window = {
 
 								text_multi = {
 									visible = "[Faith.GetReligiousHead.IsValid]"
-									text = "RELIGIOUS_HEAD_WITH_NAME"
+									# MOD(secular-title-for-hof): "Override Primary Title" checkbox
+									# This is so that the player sees the effects of
+									# primary title override right here in the faith window.
+									text = "[Faith.GetReligiousHead.GetUINameNotMeNoTooltip|U]"
+									#text = "RELIGIOUS_HEAD_WITH_NAME"
+									# END MOD
 									default_format = "#high"
 									layoutpolicy_horizontal = expanding
 									fontsize_min = 10
