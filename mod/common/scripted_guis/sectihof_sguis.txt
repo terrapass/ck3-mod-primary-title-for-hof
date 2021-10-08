@@ -37,16 +37,24 @@ sectihof_sgui_toggle_override_primary_title = {
 	is_valid = {
 		scope:player = {
 			AND = {
-				# Disable override checkbox for existing saves
-				# (cannot use d_sectihof_prefer_religious, as it's not defined there,
-				# existing saves will always use secular title for custom HoF)
-				exists = title:d_sectihof_prefer_religious
+				custom_description = {
+					text = "sectihof_trigger_existing_savegame"
 
-				# Disable override checkbox for Caliphs
-				# (Sunni and Shiite HoF will always use the Caliph title)
-				NOR = {
-					has_title = title:d_sunni
-					has_title = title:d_shiite
+					# Disable override checkbox for existing saves
+					# (cannot use d_sectihof_prefer_religious, as it's not defined there,
+					# existing saves will always use secular title for custom HoF)
+					exists = title:d_sectihof_prefer_religious
+				}
+
+				custom_description = {
+					text = "sectihof_trigger_caliph"
+
+					# Disable override checkbox for Caliphs
+					# (Sunni and Shiite HoF will always use the Caliph title)
+					NOR = {
+						has_title = title:d_sunni
+						has_title = title:d_shiite
+					}
 				}
 			}
 		}

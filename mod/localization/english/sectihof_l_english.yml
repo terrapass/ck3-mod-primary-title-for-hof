@@ -6,6 +6,14 @@ l_english:
  SECTIHOF_LABEL_OVERRIDE_PRIMARY_TITLE:0 "Override Primary Title"
 
  #
+ # Triggers
+ #
+ sectihof_trigger_existing_savegame:0 "Switching between [primary_title|E] and [head_of_faith|E] title during the game is only supported in new savegames"
+ NOT_sectihof_trigger_existing_savegame:0 "$sectihof_trigger_existing_savegame$"
+ sectihof_trigger_caliph:0 "Sunni and Shia [heads_of_faith|E] always use the #high $caliph$#! title"
+ NOT_sectihof_trigger_caliph:0 "$sectihof_trigger_caliph$"
+
+ #
  # Flavors
  #
  sectihof_head_of_faith_male:0 "$head_of_faith_male$"

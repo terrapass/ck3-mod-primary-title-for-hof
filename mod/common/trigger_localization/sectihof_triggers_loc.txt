@@ -1,0 +1,11 @@
+﻿sectihof_trigger_existing_savegame = {
+    global = sectihof_trigger_existing_savegame
+    first = sectihof_trigger_existing_savegame
+    third = sectihof_trigger_existing_savegame
+}
+
+sectihof_trigger_caliph = {
+    global = sectihof_trigger_caliph
+    first = sectihof_trigger_caliph
+    third = sectihof_trigger_caliph
+}
