@@ -15,6 +15,23 @@ sectihof_events.1001 = {
             }
         }
 
+        # If d_sectihof_prefer_religious already has a holder,
+        # it means another character has already switched to religious title
+        # for their faith or was granted the switched title.
+        # Since in the current implementation there is only one marker title,
+        # we have to clear it up and revert its current holder to their old HoF title.
+        title:d_sectihof_prefer_religious = {
+            if = {
+                limit = { exists = holder }
+
+                holder = {
+                    # Switch current holder back to their old HoF title
+                    # thereby releasing d_sectihof_prefer_religious for our own use.
+                    trigger_event = sectihof_events.1002
+                }
+            }
+        }
+
         assert_if = {
             limit = { NOT = { scope:old_hof_title = { holder = root } } }
 
