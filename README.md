@@ -12,7 +12,7 @@ In vanilla game, after you create temporal Head of Faith title for your custom f
 
 With this mod installed, **in existing saves** your character will now use their Primary Title even if they are a temporal Head of Faith - you will no longer have to play as a "Pope", if you don't want to. In addition to that, **in new games** you'll be able to switch between Primary and HoF title at will via the new "Override Primary Title" checkbox, available in the faith window for your faith.
 
-AI characters playing as spiritual Heads of Faith (the Pope, the Ecumenical Patriarch etc.) are not affected and will continue to use their religious title. Sunni and Shia Caliphs will also continue to use their Caliph title.
+This change does not apply to Sunni and Shia Caliphs, who will continue to use their Caliph title. Likewise, AI characters playing as spiritual Heads of Faith (the Pope, the Ecumenical Patriarch etc.) are not affected and will continue to use their religious title.
 
 Should be compatible with any mods that don't modify faith UI or Head of Faith flavorization.
 
