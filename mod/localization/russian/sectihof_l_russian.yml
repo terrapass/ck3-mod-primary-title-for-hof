@@ -8,15 +8,15 @@ l_russian:
  #
  # Triggers
  #
- sectihof_trigger_existing_savegame:0 "Переключение между первым титулом и титулом главы конфессии во время игры возможно только в новых сохранениях.\n#weak Ваши персонажи будут всегда использовать свои [primary_titles|E] в существующих сохранениях.#!"
+ sectihof_trigger_existing_savegame:0 "Переключение между [Concept('primary_title', 'первым титулом')|El] и титулом [Concept('head_of_faith', 'главы конфессии')|El] во время игры возможно только в новых сохранениях.\n#weak В существующих сохранениях ваши персонажи всегда будут использовать свои [primary_titles|El].#!"
  NOT_sectihof_trigger_existing_savegame:0 "$sectihof_trigger_existing_savegame$"
- sectihof_trigger_caliph:0 "Суннитские и шиитские [heads_of_faith|E] всегда используют титул #high \"$caliph$\"#!"
+ sectihof_trigger_caliph:0 "Суннитские и шиитские [heads_of_faith|El] всегда используют титул #high \"$caliph$\"#!"
  NOT_sectihof_trigger_caliph:0 "$sectihof_trigger_caliph$"
 
  #
  # Effects
  #
- sectihof_effect_switch_to_religious_title_checkbox:0 "Использовать религиозный титул ([head_of_faith|E]), а не ваш [primary_title|E]"
+ sectihof_effect_switch_to_religious_title_checkbox:0 "Использовать титул [Concept('head_of_faith', 'главы конфессии')|El] вместо вашего [Concept('primary_title', 'первого титула')|El]"
 
  #
  # Flavors
