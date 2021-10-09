@@ -20,4 +20,14 @@ Should be compatible with any mods that don't modify faith UI or Head of Faith f
 Under the hood
 --------------
 
-(TODO)
+In CK3 different title variants and their priorities for character display names are defined in `common/flavorization` files. This includes cultural variants (e.g. High King for Irish culture), ruler relatives titles (e.g. Prince, Queen-Mother etc.) and, more relevant for this mod, `head_of_faith_male` and `head_of_faith_female` definitions. These latter ones have a very high priority set in vanilla `common\flavorization\00_title_holders.txt` file, which means that if your character is a Head of Faith, they will use their HoF title (e.g. Pope), even if they have a very high-ranked primary title, such as Emperor.
+
+This mod was developed with two objectives in mind:
+1. To have player characters use their Primary Title by default, even if they are a HoF.
+2. To allow the player to switch between their Primary Title and HoF title at will during the game.
+
+The first objective turned out to be pretty simple to accompilsh - to do it this mod simply adds a restriction for `governments = { theocracy_government }` to `head_of_faith_*` definitions for both sexes (see [sectihof_flavors.txt](https://github.com/terrapass/ck3-mod-primary-title-for-hof/blob/master/mod/common/flavorization/sectihof_flavors.txt#L10)). This way the Catholic Pope and other spiritual Heads of Faith in the game keep their religious titles, while the player character, who can't currently rule a theocracy, will revert to using their Primary Title.
+
+On the other hand, the ability for the player to switch between Primary and HoF titles at runtime turned out to be more challenging to implement. Ideally, one would like to tie HoF flavorization's `priority` to some sort of a variable. However, I failed to find any way to do so in the current version of the game. What _is_ possible though, is to apply a flavorization to only one pre-defined title (this is how Sunni and Shia Caliph titles are set up in vanilla).
+
+So in the end, here's what this mod does to provide the logic behind the "Override Primary Title" checkbox in the faith window. First, a new titular `d_sectihof_prefer_religious` title is [defined](https://github.com/terrapass/ck3-mod-primary-title-for-hof/blob/master/mod/common/landed_titles/sectihof_titles.txt) and tied up in [the two new flavorizations](https://github.com/terrapass/ck3-mod-primary-title-for-hof/blob/master/mod/common/flavorization/sectihof_flavors.txt#L27) - `sectihof_head_of_faith_male` and `sectihof_head_of_faith_female`, identical to vanilla `head_of_faith_*` definitions with the exception of this `titles = { d_sectihof_prefer_religious }` restriction. This means that religious HoF title will only take precedence over character's primary title _if_ the character also holds `d_sectihof_prefer_religious`.
