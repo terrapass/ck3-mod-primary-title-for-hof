@@ -1,0 +1,12 @@
+﻿# These dummy CoA definitions are needed for compatibility with the CoA Designer mod by Lajos Tueur.
+# Without these the game crashes on entering new game ruler selection screen, if both mods are active.
+
+d_sectihof_prefer_religious = {
+    pattern = "pattern_solid.dds"
+    color1 = rgb { 255 0 255 }
+}
+
+d_sectihof_temporary_title_history_storage = {
+    pattern = "pattern_solid.dds"
+    color1 = rgb { 0 255 255 }
+}
