@@ -8,7 +8,7 @@ l_simp_chinese:
  #
  # Triggers
  #
- sectihof_trigger_existing_savegame:0 "只在新存档中支持在[primary_title|E]和[head_of_faith|E]头衔之间切换。\n#weak 你的角色将在现有存档中总是 使他们的[primary_titles|E]。#!"
+ sectihof_trigger_existing_savegame:0 "只在新存档中支持在[primary_title|E]和[head_of_faith|E]头衔之间切换。\n#weak 你的角色将在现有存档中总是使用他们的[primary_titles|E]。#!"
  NOT_sectihof_trigger_existing_savegame:0 "$sectihof_trigger_existing_savegame$"
  sectihof_trigger_caliph:0 "逊尼派和什叶派[heads_of_faith|E]总是使用#high $caliph$#!头衔"
  NOT_sectihof_trigger_caliph:0 "$sectihof_trigger_caliph$"
