@@ -15,6 +15,8 @@ With this mod installed, **in existing saves** your character will now use their
 
 In addition to that, **in new games**, while playing as the Head of Faith, you'll be able to switch between Primary and HoF title at will via the new "Override Primary Title" checkbox, available in the faith window for your faith.
 
+![Screenshot demonstrating "Override Primary Title" checkbox](https://raw.githubusercontent.com/terrapass/ck3-mod-primary-title-for-hof/master/promo/screenshots/screenshot1.png)
+
 This change does not apply to Sunni and Shia Caliphs, who will continue to use their Caliph title. Likewise, AI characters playing as spiritual Heads of Faith (the Pope, the Ecumenical Patriarch etc.) are not affected and will continue to use their religious title.
 
 Should be compatible with any mods that don't modify faith UI or Head of Faith flavorization.
