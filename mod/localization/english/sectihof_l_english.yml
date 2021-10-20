@@ -26,6 +26,12 @@ l_english:
 
  #
  # Titles
- #
+ # 
+ sectihof_empty_title_name:0 "​" # Contains U+200B (ZERO WIDTH SPACE) to be technically non-empty but still hide utility titles from Find Title output
  sectihof_old_hof_title:0 "[GetGlobalVariable('sectihof_old_hof_title').Title.GetBaseNameNoTierNoTooltip]"
- sectihof_old_hof_title_adj:0 " "
+ sectihof_old_hof_title_adj:0 "$sectihof_empty_title_name$"
+
+ d_sectihof_prefer_religious:0 "$sectihof_empty_title_name$"
+ d_sectihof_prefer_religious_adj:0 "$sectihof_empty_title_name$"
+ d_sectihof_temporary_title_history_storage:0 "$sectihof_empty_title_name$"
+ d_sectihof_temporary_title_history_storage_adj:0 "$sectihof_empty_title_name$"
