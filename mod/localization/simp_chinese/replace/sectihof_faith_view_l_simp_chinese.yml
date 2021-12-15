@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ # This is so that the player sees the effects of
+ # primary title override right here in the faith window.
+ RELIGIOUS_HEAD_WITH_NAME:0 "[Faith.GetReligiousHead.GetUINameNotMeNoTooltip|U]"
