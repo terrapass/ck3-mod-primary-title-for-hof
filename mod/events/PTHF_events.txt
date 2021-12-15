@@ -1,13 +1,13 @@
-﻿namespace = sectihof_events
+﻿namespace = PTHF_events
 
 # Switch to HoF religious title
-sectihof_events.1001 = {
+PTHF_events.1001 = {
     type = character_event
 
     hidden = yes
 
     immediate = {
-        debug_log = "sectihof_events.1001 (switching to HoF religious title)"
+        debug_log = "PTHF_events.1001 (switching to HoF religious title)"
 
         faith = {
             religious_head_title = {
@@ -27,7 +27,7 @@ sectihof_events.1001 = {
                 holder = {
                     # Switch current holder back to their old HoF title
                     # thereby releasing d_sectihof_prefer_religious for our own use.
-                    trigger_event = sectihof_events.1002
+                    trigger_event = PTHF_events.1002
                 }
             }
         }
@@ -98,7 +98,7 @@ sectihof_events.1001 = {
 }
 
 # Switch to primary secular title
-sectihof_events.1002 = {
+PTHF_events.1002 = {
     type = character_event
 
     hidden = yes
@@ -106,7 +106,7 @@ sectihof_events.1002 = {
     immediate = {
         add_internal_flag = special
 
-        debug_log = "sectihof_events.1002 (switching to primary secular title)"
+        debug_log = "PTHF_events.1002 (switching to primary secular title)"
 
         assert_if = {
             limit = { NOT = { exists = global_var:sectihof_old_hof_title } }

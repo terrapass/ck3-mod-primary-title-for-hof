@@ -1,5 +1,0 @@
-﻿sectihof_effect_switch_to_religious_title_checkbox = {
-	first = sectihof_effect_switch_to_religious_title_checkbox
-	third = sectihof_effect_switch_to_religious_title_checkbox
-	global = sectihof_effect_switch_to_religious_title_checkbox
-}

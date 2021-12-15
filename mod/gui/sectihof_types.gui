@@ -1,6 +1,0 @@
-﻿types sectihof_types
-{
-    type sectihof_override_primary_title_checkbox = hbox {
-        using = sectihof_override_primary_title_checkbox
-    }
-}

@@ -1,6 +1,6 @@
-﻿template "sectihof_override_primary_title_checkbox" {
+﻿template "PTHF_override_primary_title_checkbox" {
     button_checkbox_label = {
-        datacontext = "[GetScriptedGui('sectihof_sgui_toggle_override_primary_title')]"
+        datacontext = "[GetScriptedGui('PTHF_sgui_toggle_override_primary_title')]"
         visible = "[ScriptedGui.IsShown( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
         enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
         onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( Faith.MakeScope ).AddScope( 'player', GetPlayer.MakeScope ).End )]"
@@ -8,12 +8,18 @@
 
         blockoverride "checkbox"
         {
-            checked = "[GetScriptedGui('sectihof_sgui_is_override_primary_title_checked').IsValid( GuiScope.SetRoot( Faith.MakeScope ).End )]"
+            checked = "[GetScriptedGui('PTHF_sgui_is_override_primary_title_checked').IsValid( GuiScope.SetRoot( Faith.MakeScope ).End )]"
         }
 
         blockoverride "text"
         {
-            text = "SECTIHOF_LABEL_OVERRIDE_PRIMARY_TITLE"
+            text = "PTHF_LABEL_OVERRIDE_PRIMARY_TITLE"
         }
     }
+}
+
+# Compatibility template for mods that were integrated with this one
+# before it switched to using PTHF mod tag in v0.4.0.
+template "sectihof_override_primary_title_checkbox" {
+    using = PTHF_override_primary_title_checkbox
 }

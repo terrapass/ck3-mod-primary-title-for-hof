@@ -1,0 +1,37 @@
+﻿# TODO: Switch to using concrete game concepts/faith/title names instead of generalized descriptions
+l_russian:
+ #
+ # GUI
+ #
+ PTHF_LABEL_OVERRIDE_PRIMARY_TITLE:0 "Вместо первого титула"
+
+ #
+ # Triggers
+ #
+ PTHF_trigger_existing_savegame:0 "Переключение между [Concept('primary_title', 'первым титулом')|El] и титулом [Concept('head_of_faith', 'главы конфессии')|El] во время игры возможно только в новых сохранениях.\n#weak В существующих сохранениях ваши персонажи всегда будут использовать свои [primary_titles|El].#!"
+ NOT_PTHF_trigger_existing_savegame:0 "$PTHF_trigger_existing_savegame$"
+ PTHF_trigger_caliph:0 "Суннитские и шиитские [heads_of_faith|El] всегда используют титул #high \"$caliph$\"#!"
+ NOT_PTHF_trigger_caliph:0 "$PTHF_trigger_caliph$"
+
+ #
+ # Effects
+ #
+ PTHF_effect_switch_to_religious_title_checkbox:0 "Использовать титул [Concept('head_of_faith', 'главы конфессии')|El] вместо вашего [Concept('primary_title', 'первого титула')|El]"
+
+ #
+ # Flavors
+ #
+ sectihof_head_of_faith_male:0 "$head_of_faith_male$"
+ sectihof_head_of_faith_female:0 "$head_of_faith_female$"
+
+ #
+ # Titles
+ # 
+ PTHF_empty_title_name:0 "​" # Contains U+200B (ZERO WIDTH SPACE) to be technically non-empty but still hide utility titles from Find Title output
+ sectihof_old_hof_title:0 "[GetGlobalVariable('sectihof_old_hof_title').Title.GetBaseNameNoTierNoTooltip]"
+ sectihof_old_hof_title_adj:0 "$PTHF_empty_title_name$"
+
+ d_sectihof_prefer_religious:0 "$PTHF_empty_title_name$"
+ d_sectihof_prefer_religious_adj:0 "$PTHF_empty_title_name$"
+ d_sectihof_temporary_title_history_storage:0 "$PTHF_empty_title_name$"
+ d_sectihof_temporary_title_history_storage_adj:0 "$PTHF_empty_title_name$"

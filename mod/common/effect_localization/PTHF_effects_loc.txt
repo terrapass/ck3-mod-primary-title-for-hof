@@ -1,0 +1,5 @@
+﻿PTHF_effect_switch_to_religious_title_checkbox = {
+	first = PTHF_effect_switch_to_religious_title_checkbox
+	third = PTHF_effect_switch_to_religious_title_checkbox
+	global = PTHF_effect_switch_to_religious_title_checkbox
+}

@@ -704,7 +704,7 @@ window = {
 							}
 
 							# MOD(primary-title-for-hof): "Override Primary Title" checkbox
-							sectihof_override_primary_title_checkbox = {}
+							PTHF_override_primary_title_checkbox = {}
 							# END MOD
 
 							expand = {}

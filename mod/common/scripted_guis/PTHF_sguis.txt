@@ -1,4 +1,4 @@
-﻿sectihof_sgui_is_override_primary_title_checked = {
+﻿PTHF_sgui_is_override_primary_title_checked = {
 	scope = faith
 
 	is_valid = {
@@ -18,7 +18,7 @@
 	}
 }
 
-sectihof_sgui_toggle_override_primary_title = {
+PTHF_sgui_toggle_override_primary_title = {
 	scope = faith
 
 	saved_scopes = {
@@ -38,7 +38,7 @@ sectihof_sgui_toggle_override_primary_title = {
 		scope:player = {
 			AND = {
 				custom_description = {
-					text = "sectihof_trigger_existing_savegame"
+					text = "PTHF_trigger_existing_savegame"
 
 					# Disable override checkbox for existing saves
 					# (cannot use d_sectihof_prefer_religious, as it's not defined there,
@@ -47,7 +47,7 @@ sectihof_sgui_toggle_override_primary_title = {
 				}
 
 				custom_description = {
-					text = "sectihof_trigger_caliph"
+					text = "PTHF_trigger_caliph"
 
 					# Disable override checkbox for Caliphs
 					# (Sunni and Shiite HoF will always use the Caliph title)
@@ -62,7 +62,7 @@ sectihof_sgui_toggle_override_primary_title = {
 
 	effect = {
 		custom_description_no_bullet = {
-			text = "sectihof_effect_switch_to_religious_title_checkbox"
+			text = "PTHF_effect_switch_to_religious_title_checkbox"
 		}
 
 		if = {
@@ -73,12 +73,12 @@ sectihof_sgui_toggle_override_primary_title = {
 			}
 
 			scope:player = {
-				trigger_event = sectihof_events.1001 # Switch to HoF religious title
+				trigger_event = PTHF_events.1001 # Switch to HoF religious title
 			}
 		}
 		else = {
 			scope:player = {
-				trigger_event = sectihof_events.1002 # Switch to primary secular title
+				trigger_event = PTHF_events.1002 # Switch to primary secular title
 			}
 		}
 	}

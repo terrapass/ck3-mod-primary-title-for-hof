@@ -1,0 +1,37 @@
+﻿# Translation by kennyS (https://steamcommunity.com/profiles/76561198974129761 ).
+l_simp_chinese:
+ #
+ # GUI
+ #
+ PTHF_LABEL_OVERRIDE_PRIMARY_TITLE:0 "覆盖主头衔"
+
+ #
+ # Triggers
+ #
+ PTHF_trigger_existing_savegame:0 "只在新存档中支持在[primary_title|E]和[head_of_faith|E]头衔之间切换。\n#weak 你的角色将在现有存档中总是使用他们的[primary_titles|E]。#!"
+ NOT_PTHF_trigger_existing_savegame:0 "$PTHF_trigger_existing_savegame$"
+ PTHF_trigger_caliph:0 "逊尼派和什叶派[heads_of_faith|E]总是使用#high $caliph$#!头衔"
+ NOT_PTHF_trigger_caliph:0 "$PTHF_trigger_caliph$"
+
+ #
+ # Effects
+ #
+ PTHF_effect_switch_to_religious_title_checkbox:0 "使用你的[head_of_faith|E]头衔替代你的[primary_title|E]"
+
+ #
+ # Flavors
+ #
+ sectihof_head_of_faith_male:0 "$head_of_faith_male$"
+ sectihof_head_of_faith_female:0 "$head_of_faith_female$"
+
+ #
+ # Titles
+ # 
+ PTHF_empty_title_name:0 "​" # Contains U+200B (ZERO WIDTH SPACE) to be technically non-empty but still hide utility titles from Find Title output
+ sectihof_old_hof_title:0 "[GetGlobalVariable('sectihof_old_hof_title').Title.GetBaseNameNoTierNoTooltip]"
+ sectihof_old_hof_title_adj:0 "$PTHF_empty_title_name$"
+
+ d_sectihof_prefer_religious:0 "$PTHF_empty_title_name$"
+ d_sectihof_prefer_religious_adj:0 "$PTHF_empty_title_name$"
+ d_sectihof_temporary_title_history_storage:0 "$PTHF_empty_title_name$"
+ d_sectihof_temporary_title_history_storage_adj:0 "$PTHF_empty_title_name$"

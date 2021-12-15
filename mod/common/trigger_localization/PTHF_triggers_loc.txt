@@ -1,0 +1,11 @@
+﻿PTHF_trigger_existing_savegame = {
+    global = PTHF_trigger_existing_savegame
+    first = PTHF_trigger_existing_savegame
+    third = PTHF_trigger_existing_savegame
+}
+
+PTHF_trigger_caliph = {
+    global = PTHF_trigger_caliph
+    first = PTHF_trigger_caliph
+    third = PTHF_trigger_caliph
+}

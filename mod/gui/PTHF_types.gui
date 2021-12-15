@@ -1,0 +1,6 @@
+﻿types PTHF_types
+{
+    type PTHF_override_primary_title_checkbox = hbox {
+        using = PTHF_override_primary_title_checkbox
+    }
+}
