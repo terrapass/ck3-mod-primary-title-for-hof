@@ -9,3 +9,9 @@ PTHF_trigger_caliph = {
     first = PTHF_trigger_caliph
     third = PTHF_trigger_caliph
 }
+
+PTHF_trigger_CTFA_has_vanity_title = {
+    global = PTHF_trigger_CTFA_has_vanity_title
+    first = PTHF_trigger_CTFA_has_vanity_title
+    third = PTHF_trigger_CTFA_has_vanity_title
+}

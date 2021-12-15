@@ -12,6 +12,8 @@ l_simp_chinese:
  NOT_PTHF_trigger_existing_savegame:0 "$PTHF_trigger_existing_savegame$"
  PTHF_trigger_caliph:0 "逊尼派和什叶派[heads_of_faith|E]总是使用#high $caliph$#!头衔"
  NOT_PTHF_trigger_caliph:0 "$PTHF_trigger_caliph$"
+ PTHF_trigger_CTFA_has_vanity_title:0 "You are using a custom [CTFA_form_of_address|E], which currently takes priority over [head_of_faith|E] title.\n#weak Revert to standard [CTFA_foa] to be able to switch to the [head_of_faith] title.#!"
+ NOT_PTHF_trigger_CTFA_has_vanity_title:0 "$PTHF_trigger_CTFA_has_vanity_title$"
 
  #
  # Effects

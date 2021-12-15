@@ -14,6 +14,12 @@
 				religious_head_title = title:d_sunni
 				religious_head_title = title:d_shiite
 			}
+
+			# For now regard CTFA VT holders as always holding secular title
+			# (they do use their Primary Title after all).
+			religious_head_title.holder = {
+				PTHF_CTFA_has_vanity_title = no
+			}
 		}
 	}
 }
@@ -55,6 +61,16 @@ PTHF_sgui_toggle_override_primary_title = {
 						has_title = title:d_sunni
 						has_title = title:d_shiite
 					}
+				}
+
+				custom_description = {
+					text = "PTHF_trigger_CTFA_has_vanity_title"
+
+					# For now disable override checkbox if the character
+					# is currently using a custom FoA via the CTFA mod.
+					# TODO: Allow switching between HoF and Primary Title
+					#       while preserving the custom FoA.
+					PTHF_CTFA_has_vanity_title = no
 				}
 			}
 		}

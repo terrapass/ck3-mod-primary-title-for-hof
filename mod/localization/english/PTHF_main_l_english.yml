@@ -12,6 +12,8 @@ l_english:
  NOT_PTHF_trigger_existing_savegame:0 "$PTHF_trigger_existing_savegame$"
  PTHF_trigger_caliph:0 "Sunni and Shia [heads_of_faith|E] always use the #high $caliph$#! title"
  NOT_PTHF_trigger_caliph:0 "$PTHF_trigger_caliph$"
+ PTHF_trigger_CTFA_has_vanity_title:0 "You are using a custom [CTFA_form_of_address|E], which currently takes priority over [head_of_faith|E] title.\n#weak Revert to the standard [CTFA_foa] to be able to switch to the [head_of_faith] title.#!"
+ NOT_PTHF_trigger_CTFA_has_vanity_title:0 "$PTHF_trigger_CTFA_has_vanity_title$"
 
  #
  # Effects

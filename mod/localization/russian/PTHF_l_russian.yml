@@ -12,6 +12,8 @@ l_russian:
  NOT_PTHF_trigger_existing_savegame:0 "$PTHF_trigger_existing_savegame$"
  PTHF_trigger_caliph:0 "Суннитские и шиитские [heads_of_faith|El] всегда используют титул #high \"$caliph$\"#!"
  NOT_PTHF_trigger_caliph:0 "$PTHF_trigger_caliph$"
+ PTHF_trigger_CTFA_has_vanity_title:0 "Вы используете собственную [Concept('CTFA_form_of_address', 'форму обращения')|El], которая имеет больший приоритет чем титул [Concept('head_of_faith', 'главы конфессии')|El].\n#weak Верните себе стандартную [CTFA_foa], чтобы мочь перейти на использование титула [Concept('head_of_faith', 'главы конфессии')|El].#!"
+ NOT_PTHF_trigger_CTFA_has_vanity_title:0 "$PTHF_trigger_CTFA_has_vanity_title$"
 
  #
  # Effects

@@ -1,0 +1,12 @@
+﻿PTHF_is_fully_compatible_savegame = {
+	exists = title:d_sectihof_prefer_religious
+}
+
+PTHF_CTFA_is_loaded = {
+	exists = global_var:CTFA_vanity_title_0
+}
+
+PTHF_CTFA_has_vanity_title = {
+	PTHF_CTFA_is_loaded = yes
+	CTFA_has_vanity_title = yes
+}
