@@ -86,8 +86,11 @@ PTHF_events.1001 = {
             set_religious_head_title = title:d_sectihof_prefer_religious
         }
 
-        # TODO: Wrap in an if to suppress error logs
-        add_realm_law_skip_effects = same_faith_succession_law
+        if = {
+            limit = { NOT = { has_realm_law = same_faith_succession_law } }
+
+            add_realm_law_skip_effects = same_faith_succession_law
+        }
 
         title:d_sectihof_prefer_religious = {
             add_title_law = temporal_head_of_faith_succession_law
@@ -158,8 +161,11 @@ PTHF_events.1002 = {
             set_religious_head_title = global_var:sectihof_old_hof_title
         }
 
-        # TODO: Wrap in an if to suppress error logs
-        add_realm_law_skip_effects = same_faith_succession_law
+        if = {
+            limit = { NOT = { has_realm_law = same_faith_succession_law } }
+
+            add_realm_law_skip_effects = same_faith_succession_law
+        }
 
         global_var:sectihof_old_hof_title = {
             add_title_law = temporal_head_of_faith_succession_law
