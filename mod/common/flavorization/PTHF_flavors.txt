@@ -8,7 +8,9 @@ head_of_faith_male = {
 	special = head_of_faith
 	priority = 300
 	governments = { theocracy_government }
-	top_liege = no
+	flavourization_rules = {
+		top_liege = no
+	}
 }
 
 head_of_faith_female = {
@@ -17,7 +19,9 @@ head_of_faith_female = {
 	special = head_of_faith
 	priority = 300
 	governments = { theocracy_government }
-	top_liege = no
+	flavourization_rules = {
+		top_liege = no
+	}
 }
 
 #
@@ -30,7 +34,9 @@ sectihof_head_of_faith_male = {
 	special = head_of_faith
 	priority = 300
 	titles = { d_sectihof_prefer_religious }
-	top_liege = no
+	flavourization_rules = {
+		top_liege = no
+	}
 }
 
 sectihof_head_of_faith_female = {
@@ -39,5 +45,7 @@ sectihof_head_of_faith_female = {
 	special = head_of_faith
 	priority = 300
 	titles = { d_sectihof_prefer_religious }
-	top_liege = no
+	flavourization_rules = {
+		top_liege = no
+	}
 }
